@@ -15,7 +15,9 @@ module.exports = function(stream, io){
         avatar: data['user']['profile_image_url'],
         body: data['text'],
         date: data['created_at'],
-        screenname: data['user']['screen_name']
+        screenname: data['user']['screen_name'],
+        coordinates_lon: data['coordinates']['coordinates'][0],
+        coordinates_lat: data['coordinates']['coordinates'][1]
       };
 
       // Create a new model instance with our object
